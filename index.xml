@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <title>binchen&#39;s blog</title>
+    <link>https://binchenn.github.io/</link>
+    <description>Recent content on binchen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Dec 2021 16:32:51 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 17:54:51 +0800</lastBuildDate><atom:link href="https://binchenn.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/post/test/</link>
-      <pubDate>Sun, 12 Dec 2021 16:32:51 +0800</pubDate>
+      <title></title>
+      <link>https://binchenn.github.io/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/test/</guid>
-      <description></description>
+      <guid>https://binchenn.github.io/about/</guid>
+      <description>About this blog This is my blog, a place to record something interesting about science, technology and life.
+It makes use of a variety of open source projects including:
+ Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Install clangd in alios 7</title>
+      <link>https://binchenn.github.io/post/2021/vscode_remote_clangd/</link>
+      <pubDate>Sun, 12 Dec 2021 17:54:51 +0800</pubDate>
+      
+      <guid>https://binchenn.github.io/post/2021/vscode_remote_clangd/</guid>
+      <description>clangd 是一款 C/C++ language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan</description>
     </item>
     
   </channel>
