@@ -6,7 +6,16 @@
     <description>Recent content in Posts on binchen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Dec 2021 17:54:51 +0800</lastBuildDate><atom:link href="https://binchenn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 00:15:51 +0800</lastBuildDate><atom:link href="https://binchenn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创刊词</title>
+      <link>https://binchenn.github.io/post/2021/preface/</link>
+      <pubDate>Tue, 14 Dec 2021 00:15:51 +0800</pubDate>
+      
+      <guid>https://binchenn.github.io/post/2021/preface/</guid>
+      <description>入职半年有余，笔者曾经信誓旦旦要像很多互联网大神一样，把自己学过的东西、经历过的事，取其精华记录在案，一来作为自己学习总结的一种手段，二来作</description>
+    </item>
+    
     <item>
       <title>Install clangd in alios 7</title>
       <link>https://binchenn.github.io/post/2021/vscode_remote_clangd/</link>
