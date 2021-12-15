@@ -6,7 +6,7 @@
     <description>Recent content on binchen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Dec 2021 00:15:51 +0800</lastBuildDate><atom:link href="https://binchenn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 22:15:51 +0800</lastBuildDate><atom:link href="https://binchenn.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://binchenn.github.io/about/</link>
@@ -15,6 +15,15 @@
       <guid>https://binchenn.github.io/about/</guid>
       <description>About this blog This is my blog, a place to record something interesting about science, technology and life.
 Thanks Github Pages, Hugo and Even theme for helping me to build such a beautiful blog site.</description>
+    </item>
+    
+    <item>
+      <title>用 Hugo &#43; GithubPages 打造你的个人博客</title>
+      <link>https://binchenn.github.io/post/2021/hugo_github_pages_blog/</link>
+      <pubDate>Tue, 14 Dec 2021 22:15:51 +0800</pubDate>
+      
+      <guid>https://binchenn.github.io/post/2021/hugo_github_pages_blog/</guid>
+      <description></description>
     </item>
     
     <item>
