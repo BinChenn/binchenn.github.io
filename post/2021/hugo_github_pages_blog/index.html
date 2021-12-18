@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="binchen" /><meta name="description" content="" /><meta name="keywords" content="Science, Technology, Life" />
+<meta name="author" content="binchen" /><meta name="description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客" /><meta name="keywords" content="Science, Technology, Life" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="用 Hugo &#43; GithubPages 打造你的个人博客" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://binchenn.github.io/post/2021/hugo_github_pages_blog/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-12-14T22:15:51+08:00" />
-<meta property="article:modified_time" content="2021-12-14T22:15:51+08:00" />
+<meta property="article:published_time" content="2021-12-18T15:15:51+08:00" />
+<meta property="article:modified_time" content="2021-12-18T15:15:51+08:00" />
 
 <meta itemprop="name" content="用 Hugo &#43; GithubPages 打造你的个人博客">
-<meta itemprop="description" content=""><meta itemprop="datePublished" content="2021-12-14T22:15:51+08:00" />
-<meta itemprop="dateModified" content="2021-12-14T22:15:51+08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客"><meta itemprop="datePublished" content="2021-12-18T15:15:51+08:00" />
+<meta itemprop="dateModified" content="2021-12-18T15:15:51+08:00" />
+<meta itemprop="wordCount" content="1533">
 <meta itemprop="keywords" content="Hugo,GithubPages,Blog," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="用 Hugo &#43; GithubPages 打造你的个人博客"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,12 +136,12 @@
       <h1 class="post-title">用 Hugo &#43; GithubPages 打造你的个人博客</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2021-12-14 </span>
+        <span class="post-time"> 2021-12-18 </span>
         <div class="post-category">
             <a href="/categories/tools/"> Tools </a>
             </div>
-          <span class="more-meta"> 0 words </span>
-          <span class="more-meta"> 0 mins read </span>
+          <span class="more-meta"> 1533 words </span>
+          <span class="more-meta"> 4 mins read </span>
         
       </div>
     </header>
@@ -149,11 +149,214 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#博客工具选择">博客工具选择</a></li>
+        <li><a href="#hugo-安装与配置">Hugo 安装与配置</a>
+          <ul>
+            <li><a href="#安装-hugo">安装 Hugo</a></li>
+            <li><a href="#建立博客站点">建立博客站点</a></li>
+            <li><a href="#安装主题">安装主题</a></li>
+          </ul>
+        </li>
+        <li><a href="#新建博文">新建博文</a></li>
+        <li><a href="#查看网站效果">查看网站效果</a></li>
+        <li><a href="#博客网站部署">博客网站部署</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      
+      <blockquote>
+<p>介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。</p>
+</blockquote>
+<h2 id="博客工具选择">博客工具选择</h2>
+<p>博客工具多种多样，有想上古大神这样的手写 html 静态页面+网站服务器（eg. <a href="http://www.lamport.org/">lamport</a>），也有大量基于 WordPress + 网站服务器的精美博客，甚至还有大佬用自己手写的服务器框架（eg. <a href="https://ddadaal.me/about/odyssey">A Personal Blog Odyssey</a>），大佬们的技术力我是相当佩服的，但这样的建站流程也是相当麻烦的，费时费力还费钱。正如我在前言中说的，真正重要的不是博客网站，而是你写出的一篇篇内容。所以我选择了最简单方便的个人博客搭建方式：<a href="https://pages.github.com/">GitHub Pages</a>。简言之，Github Pages 是基于 Github 仓库的静态网页托管服务，你只需要推动博客内容到 Github 仓库，就可以用自定义的域名访问网站，无需购买云服务器、搭建 Web 服务框架等操作，省心省事还省钱。</p>
+<p>但 Github Pages 并不能完全解决你的问题，因为它只是简单地<strong>展示</strong>你推送到仓库的 html 页面，而不能帮助你<strong>生成</strong> html 页面。也就是说，如果你想将本地写好的 Markdown 文件展示到博客页面，仅有 Github Pages 是做不到的，还需要一样工具，静态页面生成框架，目前常用的框架有 3 种：</p>
+<ul>
+<li>Jekyll</li>
+<li>Hexo</li>
+<li>Hugo</li>
+</ul>
+<p>网上比较 3 者优劣的文章已经有很多了，但我不想纠结这些细节，偶然看到一位大佬的博客 <a href="https://jdhao.github.io/2018/10/10/hexo_to_hugo/">把博客从 Hexo 迁移到 Hugo</a>，他用的主题深得我心，就决定基于 Github Pages + hugo + Even 构建我的博客。想用其余主题的读者可以参考 <a href="https://themes.gohugo.io/">Hugo 官网</a> 或在 Github 上搜索自己喜欢的主题。有能力的读者可以也可以设计自己的主题。</p>
+<h2 id="hugo-安装与配置">Hugo 安装与配置</h2>
+<h3 id="安装-hugo">安装 Hugo</h3>
+<p>Mac 上直接用 brew 安装，其他系统参考官方<a href="https://gohugo.io/getting-started/installing/">安装指南</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">brew install hugo
+</code></pre></td></tr></table>
+</div>
+</div><p>验证是否安装成功：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo version
+hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="建立博客站点">建立博客站点</h3>
+<p>安装 Hugo 之后，需要建立一个文件目录存放网站所有内容，Hugo 提供了简单的命令行工具。运行下面的命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new site myblogsite
+</code></pre></td></tr></table>
+</div>
+</div><p>会看到以下提示内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Congratulations! Your new Hugo site is created in /Users/xxx/myblogsite.
+
+Just a few more steps and you’re ready to go:
+
+Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/, or create your own with the “hugo new theme ” command.
+Perhaps you want to add some content. You can add single files with “hugo new /.”.
+Start the built-in live server via “hugo server”.
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre></td></tr></table>
+</div>
+</div><p>博客目录下会有以下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">archetypes/  config.toml content/   data/    layouts/     public/      resources/   static/      themes/
+</code></pre></td></tr></table>
+</div>
+</div><p>其中 <code>archetypes/</code> 中有一个 <code>default.md</code>，保存了新建博文的默认配置；<code>config.toml</code> 是博客的配置文件；<code>themes/</code>保存了主题文件。</p>
+<p>后续步骤中还会有 <code>public/</code> 目录，构建生成的网页文件将全部保存在<code>public/</code>目录。</p>
+<h3 id="安装主题">安装主题</h3>
+<p>在 <code>myblogsite</code> 目录下，运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">git init -b main
+git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
+</code></pre></td></tr></table>
+</div>
+</div><p>用 <code>themes/even/exampleSite/config.toml</code> 替换默认配置文件，也可以根据需求将 <code>themes/even/archetypes/default.md</code> 替换到 <code>archetypes/default.md</code>，编辑 <code>default.md</code>，设置 <code>draft: false</code>，这样每篇新建的博文都默认可以直接发布。</p>
+<h2 id="新建博文">新建博文</h2>
+<p>用以下命令新建博文：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new post/test.md
+或者
+hugo new post/2021/test.md
+</code></pre></td></tr></table>
+</div>
+</div><p>就可以新建一篇博文，编辑 <code>test.md</code> 的内容，开始你的博客写作吧。</p>
+<h2 id="查看网站效果">查看网站效果</h2>
+<p>写作完成后，如果想在部署到网站之前预览一下文章效果，可以执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">➜   hugo server
+Start building sites … 
+hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+
+                   <span class="p">|</span> EN  
+-------------------+-----
+  Pages            <span class="p">|</span> <span class="m">30</span>  
+  Paginator pages  <span class="p">|</span>  <span class="m">0</span>  
+  Non-page files   <span class="p">|</span>  <span class="m">0</span>  
+  Static files     <span class="p">|</span> <span class="m">39</span>  
+  Processed images <span class="p">|</span>  <span class="m">0</span>  
+  Aliases          <span class="p">|</span> <span class="m">10</span>  
+  Sitemaps         <span class="p">|</span>  <span class="m">1</span>  
+  Cleaned          <span class="p">|</span>  <span class="m">0</span>  
+
+Built in <span class="m">41</span> ms
+Watching <span class="k">for</span> changes in xxx
+Watching <span class="k">for</span> config changes in xxx
+Environment: <span class="s2">&#34;development&#34;</span>
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ <span class="o">(</span><span class="nb">bind</span> address 127.0.0.1<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在浏览器中访问 <code>http://localhost:1313/</code>即可预览网站效果。</p>
+<h2 id="博客网站部署">博客网站部署</h2>
+<p>确定博客内容后，就可以将网站部署到 Github Pages 了。</p>
+<p>首先你需要新建一个名称为 <code>xxx.github.io</code>的 public 仓库，在仓库页面可以获取到 clone 链接：<code>git@github.com:$USER_NAME/xxx.github.io.git</code> ，并在根目录执行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkdir public <span class="o">&amp;&amp;</span> <span class="nb">cd</span> public
+git init -b main
+git remote add upstream git@github.com:<span class="nv">$USER_NAME</span>/xxx.github.io.git
+<span class="nb">cd</span> ..
+hugo -t even <span class="c1"># 生成网页内容并保存到 public/ 目录</span>
+git add .
+git commit -m <span class="s2">&#34;blog init&#34;</span>
+git push -f upstream main
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就部署成功了，等待几分钟后，访问网址：<code>xxx.github.io</code>即可看到自己的博客内容。</p>
+
     </div>
 
     <div class="post-copyright">
@@ -164,7 +367,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-12-14
+        2021-12-18
         
     </span>
   </p>
