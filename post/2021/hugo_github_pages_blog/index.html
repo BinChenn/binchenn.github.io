@@ -49,7 +49,7 @@
 <meta itemprop="name" content="用 Hugo &#43; GithubPages 打造你的个人博客">
 <meta itemprop="description" content="building blog with Hugo &#43; Github Pages"><meta itemprop="datePublished" content="2021-12-18T15:15:51+08:00" />
 <meta itemprop="dateModified" content="2021-12-18T15:15:51+08:00" />
-<meta itemprop="wordCount" content="1934">
+<meta itemprop="wordCount" content="2271">
 <meta itemprop="keywords" content="Hugo,GithubPages,Blog," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="用 Hugo &#43; GithubPages 打造你的个人博客"/>
 <meta name="twitter:description" content="building blog with Hugo &#43; Github Pages"/>
@@ -136,8 +136,8 @@
         <div class="post-category">
             <a href="/categories/tools/"> Tools </a>
             </div>
-          <span class="more-meta"> 1934 words </span>
-          <span class="more-meta"> 4 mins read </span>
+          <span class="more-meta"> 2271 words </span>
+          <span class="more-meta"> 5 mins read </span>
         
       </div>
     </header>
@@ -164,6 +164,7 @@
           <ul>
             <li><a href="#增加-utterances-评论系统">增加 utterances 评论系统</a></li>
             <li><a href="#增加-about-页面">增加 About 页面</a></li>
+            <li><a href="#seo-优化">SEO 优化</a></li>
           </ul>
         </li>
       </ul>
@@ -426,6 +427,44 @@ weight: 50       # About 选项的位置
 </div></li>
 </ol>
 <p>重新部署博客，可以看到新增了 About 选项。</p>
+<h3 id="seo-优化">SEO 优化</h3>
+<p>写博客不只是为了记录，也是为了更好地去(man)帮(zu)助(xu)别(rong)人(xin)，为了让搜索引擎更好地收录你的博客文章，还需要做一些搜索引擎优化(SEO)，Even 主题已经提供了丰富的 SEO 优化手段，我们只需设置一些配置项。</p>
+<ul>
+<li>最好在 <code>archtypes/default.md</code> 中增加 <code>keywords</code> 和 <code>description</code>配置，便于搜索引擎索引。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">keywords: []
+description: &#34;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>网站目录 增加 robots 文件，便于爬虫爬取网页内容。不过 Even 已经提供了 robots 和相关的网页地图设置，因此这里无需操作。</p>
+</li>
+<li>
+<p>提交博客地址到搜索引擎 <a href="https://developers.google.com/search/docs/advanced/crawling/ask-google-to-recrawl?hl=zh-CN&amp;utm_source=wmx&amp;utm_medium=deprecation-pane&amp;utm_content=submit-url">Google</a></p>
+</li>
+<li>
+<p>配置 <a href="https://support.google.com/analytics/answer/10269537">Google Analytics</a>，将获取到的 Tracking ID 配置到 <code>config.toml</code> 中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>      <span class="c"># UA-XXXXXXXX-X</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>坚持写作，持续更新网站内容</p>
+</li>
+</ul>
+<p>当然，SEO 技术博大精深，以上内容只是其中简单的一小块，更多优化手段可以参考博客 <a href="https://segmentfault.com/a/1190000014643987">Hexo 个人博客 SEO 优化（3）：改造你的博客，提升搜索引擎排名</a> 及其他资料。</p>
 
     </div>
 
