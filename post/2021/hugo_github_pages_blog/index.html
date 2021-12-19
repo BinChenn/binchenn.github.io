@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="binchen" /><meta name="description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客" /><meta name="keywords" content="Science, Technology, Life" />
+<meta name="author" content="binchen" /><meta name="description" content="building blog with Hugo &#43; Github Pages" /><meta name="keywords" content="Blog, Hugo, Github Pages, Even" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="用 Hugo &#43; GithubPages 打造你的个人博客" />
-<meta property="og:description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客" />
+<meta property="og:description" content="building blog with Hugo &#43; Github Pages" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://binchenn.github.io/post/2021/hugo_github_pages_blog/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-12-18T15:15:51+08:00" />
 <meta property="article:modified_time" content="2021-12-18T15:15:51+08:00" />
 
 <meta itemprop="name" content="用 Hugo &#43; GithubPages 打造你的个人博客">
-<meta itemprop="description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客"><meta itemprop="datePublished" content="2021-12-18T15:15:51+08:00" />
+<meta itemprop="description" content="building blog with Hugo &#43; Github Pages"><meta itemprop="datePublished" content="2021-12-18T15:15:51+08:00" />
 <meta itemprop="dateModified" content="2021-12-18T15:15:51+08:00" />
-<meta itemprop="wordCount" content="1533">
+<meta itemprop="wordCount" content="1934">
 <meta itemprop="keywords" content="Hugo,GithubPages,Blog," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="用 Hugo &#43; GithubPages 打造你的个人博客"/>
-<meta name="twitter:description" content="介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客"/>
+<meta name="twitter:description" content="building blog with Hugo &#43; Github Pages"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +86,6 @@
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/about/">
-        <li class="mobile-menu-item"></li>
-      </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
@@ -118,8 +116,6 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/"></a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li>
   </ul>
@@ -140,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/tools/"> Tools </a>
             </div>
-          <span class="more-meta"> 1533 words </span>
+          <span class="more-meta"> 1934 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -159,11 +155,17 @@
             <li><a href="#安装-hugo">安装 Hugo</a></li>
             <li><a href="#建立博客站点">建立博客站点</a></li>
             <li><a href="#安装主题">安装主题</a></li>
+            <li><a href="#新建博文">新建博文</a></li>
+            <li><a href="#查看网站效果">查看网站效果</a></li>
+            <li><a href="#博客网站部署">博客网站部署</a></li>
           </ul>
         </li>
-        <li><a href="#新建博文">新建博文</a></li>
-        <li><a href="#查看网站效果">查看网站效果</a></li>
-        <li><a href="#博客网站部署">博客网站部署</a></li>
+        <li><a href="#博客配置和优化">博客配置和优化</a>
+          <ul>
+            <li><a href="#增加-utterances-评论系统">增加 utterances 评论系统</a></li>
+            <li><a href="#增加-about-页面">增加 About 页面</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -262,7 +264,7 @@ git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
 </code></pre></td></tr></table>
 </div>
 </div><p>用 <code>themes/even/exampleSite/config.toml</code> 替换默认配置文件，也可以根据需求将 <code>themes/even/archetypes/default.md</code> 替换到 <code>archetypes/default.md</code>，编辑 <code>default.md</code>，设置 <code>draft: false</code>，这样每篇新建的博文都默认可以直接发布。</p>
-<h2 id="新建博文">新建博文</h2>
+<h3 id="新建博文">新建博文</h3>
 <p>用以下命令新建博文：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -277,7 +279,7 @@ hugo new post/2021/test.md
 </code></pre></td></tr></table>
 </div>
 </div><p>就可以新建一篇博文，编辑 <code>test.md</code> 的内容，开始你的博客写作吧。</p>
-<h2 id="查看网站效果">查看网站效果</h2>
+<h3 id="查看网站效果">查看网站效果</h3>
 <p>写作完成后，如果想在部署到网站之前预览一下文章效果，可以执行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -330,7 +332,7 @@ Web Server is available at http://localhost:1313/ <span class="o">(</span><span 
 </code></pre></td></tr></table>
 </div>
 </div><p>在浏览器中访问 <code>http://localhost:1313/</code>即可预览网站效果。</p>
-<h2 id="博客网站部署">博客网站部署</h2>
+<h3 id="博客网站部署">博客网站部署</h3>
 <p>确定博客内容后，就可以将网站部署到 Github Pages 了。</p>
 <p>首先你需要新建一个名称为 <code>xxx.github.io</code>的 public 仓库，在仓库页面可以获取到 clone 链接：<code>git@github.com:$USER_NAME/xxx.github.io.git</code> ，并在根目录执行以下命令：</p>
 <div class="highlight"><div class="chroma">
@@ -356,6 +358,74 @@ git push -f upstream main
 </code></pre></td></tr></table>
 </div>
 </div><p>这样就部署成功了，等待几分钟后，访问网址：<code>xxx.github.io</code>即可看到自己的博客内容。</p>
+<h2 id="博客配置和优化">博客配置和优化</h2>
+<p>部署成功后，网站依然略显简陋，可以通过配置 <code>config.toml</code> 中的配置项增加你想要的功能。</p>
+<h3 id="增加-utterances-评论系统">增加 utterances 评论系统</h3>
+<p>Hugo 生成的只是静态页面，如果想为博客添加评论功能，就需要引入第三方服务。</p>
+<p>utterances 是基于 Github issue 的评论系统，它会将所有评论记录到博客所在的 Github 仓库 issue 中，便于管理。只需登陆 Github 账户就可以评论，非常方便。基于 Hugo Even 主题的博客仅需 2 步即可配置。</p>
+<ol>
+<li>
+<p>首先安装 <a href="https://github.com/apps/utterances">utterances</a> 的 APP，点击 Install 后，选择托管此博客网站的 Github 仓库即可。</p>
+</li>
+<li>
+<p>编辑 <code>config.toml</code>，输入自己的 Github 用户名和博客仓库名。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">utterances</span><span class="p">]</span>       <span class="c"># https://utteranc.es/</span>
+    <span class="nx">owner</span> <span class="p">=</span> <span class="s2">&#34;USER_NAME&#34;</span>              <span class="c"># Your GitHub ID</span>
+    <span class="nx">repo</span> <span class="p">=</span> <span class="s2">&#34;xxx.github.io&#34;</span>               <span class="c"># The repo to store comment</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>重新部署博客，页面下方即可显示评论框。</p>
+</li>
+</ol>
+<h3 id="增加-about-页面">增加 About 页面</h3>
+<p>博客默认菜单只有 4 个页面选项：<code>Home</code>, <code>Archives</code>, <code>Tags</code>, <code>Categories</code>，如果想新增 <code>About</code> 页面，仅需以下 2 步：</p>
+<ol>
+<li>
+<p>新建 about 文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new about.md
+</code></pre></td></tr></table>
+</div>
+</div><p>以上命令将会创建 <code>contents/about.md</code> 文件</p>
+</li>
+<li>
+<p>在 about.md 文件的 Front Matter 中输入以下配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
+title: &#34;About&#34;
+date: 2021-12-19T13:51:21+08:00
+draft: false
+menu: &#34;main&#34;     # 在 main 新增选项 
+weight: 50       # About 选项的位置
+---
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p>重新部署博客，可以看到新增了 About 选项。</p>
 
     </div>
 

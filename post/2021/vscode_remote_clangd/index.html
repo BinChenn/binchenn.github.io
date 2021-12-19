@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="binchen" /><meta name="description" content="clangd 是一款 C/C&#43;&#43; language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan" /><meta name="keywords" content="Science, Technology, Life" />
+<meta name="author" content="binchen" /><meta name="description" content="install clangd in alios 7" /><meta name="keywords" content="vscode, clangd, C&#43;&#43;, GLIBC" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="Install clangd in alios 7" />
-<meta property="og:description" content="clangd 是一款 C/C&#43;&#43; language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan" />
+<meta property="og:description" content="install clangd in alios 7" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://binchenn.github.io/post/2021/vscode_remote_clangd/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-12-12T17:54:51+08:00" />
 <meta property="article:modified_time" content="2021-12-12T17:54:51+08:00" />
 
 <meta itemprop="name" content="Install clangd in alios 7">
-<meta itemprop="description" content="clangd 是一款 C/C&#43;&#43; language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan"><meta itemprop="datePublished" content="2021-12-12T17:54:51+08:00" />
+<meta itemprop="description" content="install clangd in alios 7"><meta itemprop="datePublished" content="2021-12-12T17:54:51+08:00" />
 <meta itemprop="dateModified" content="2021-12-12T17:54:51+08:00" />
 <meta itemprop="wordCount" content="1629">
 <meta itemprop="keywords" content="clangd,vscode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install clangd in alios 7"/>
-<meta name="twitter:description" content="clangd 是一款 C/C&#43;&#43; language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan"/>
+<meta name="twitter:description" content="install clangd in alios 7"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +86,6 @@
       </a><a href="/categories/">
         <li class="mobile-menu-item">Categories</li>
       </a><a href="/about/">
-        <li class="mobile-menu-item"></li>
-      </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
@@ -117,8 +115,6 @@
         <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/"></a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li>
