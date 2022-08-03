@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>binchen&#39;s blog</title>
+  <title>搭建 WSL &#43; VSCode &#43; Clangd 开发环境 - binchen&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="binchen" /><meta name="description" content="A blog for recording something interesting." /><meta name="keywords" content="Science, Technology, Life" />
+<meta name="author" content="binchen" /><meta name="description" content="building development env in WSL with VSCode and Clangd" /><meta name="keywords" content="WSL, VSCode, Clangd" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
-<link rel="canonical" href="https://binchenn.github.io/" />
-  <link href="https://binchenn.github.io/index.xml" rel="alternate" type="application/rss+xml" title="binchen&#39;s blog" />
-  <link href="https://binchenn.github.io/index.xml" rel="feed" type="application/rss+xml" title="binchen&#39;s blog" />
+<link rel="canonical" href="https://binchenn.github.io/post/2022/wsl_vscode_clangd/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="binchen&#39;s blog" />
-<meta property="og:description" content="A blog for recording something interesting." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://binchenn.github.io/" />
+<meta property="og:title" content="搭建 WSL &#43; VSCode &#43; Clangd 开发环境" />
+<meta property="og:description" content="building development env in WSL with VSCode and Clangd" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://binchenn.github.io/post/2022/wsl_vscode_clangd/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-03T23:41:13+08:00" />
+<meta property="article:modified_time" content="2022-08-03T23:41:13+08:00" />
 
-<meta itemprop="name" content="binchen&#39;s blog">
-<meta itemprop="description" content="A blog for recording something interesting."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="binchen&#39;s blog"/>
-<meta name="twitter:description" content="A blog for recording something interesting."/>
+<meta itemprop="name" content="搭建 WSL &#43; VSCode &#43; Clangd 开发环境">
+<meta itemprop="description" content="building development env in WSL with VSCode and Clangd"><meta itemprop="datePublished" content="2022-08-03T23:41:13+08:00" />
+<meta itemprop="dateModified" content="2022-08-03T23:41:13+08:00" />
+<meta itemprop="wordCount" content="991">
+<meta itemprop="keywords" content="Clangd,VSCode," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="搭建 WSL &#43; VSCode &#43; Clangd 开发环境"/>
+<meta name="twitter:description" content="building development env in WSL with VSCode and Clangd"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -123,22 +126,38 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022/wsl_vscode_clangd/">搭建 WSL &#43; VSCode &#43; Clangd 开发环境</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-08-03 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> Tools </a>
-          </div>
-        <span class="more-meta"> 991 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">搭建 WSL &#43; VSCode &#43; Clangd 开发环境</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-08-03 </span>
+        <div class="post-category">
+            <a href="/categories/tools/"> Tools </a>
+            </div>
+          <span class="more-meta"> 991 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#搭建流程">搭建流程</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
       <h2 id="前言">前言</h2>
 <p>随着 Windows 生态越来越开放和完善，WSL 对开发者的吸引力也越来越强，一些本来习惯 MacOS 等类 Unix 系统的开发者也开始尝试转向在 WSL 中开发，以此同时享受到 Windows 的多样性和类 Unix 系统的便利性。</p>
 <p>笔者目前的开发设备是一台公司配备的 MacOS 笔记本和个人的 Windows 笔记本，工作事务用公司电脑处理，私人事务用自己的电脑。工作之余也偶尔学习一些东西，写写笔记，这就带来一个问题：用公司电脑输出的个人内容如何完全掌握在个人手中，要知道的是，目前各大互联网公司对工作数据安全的要求都是非常严格的，通常禁止将工作电脑上的数据传输到外部设备。</p>
@@ -238,89 +257,51 @@
 </div><p>随便打开一个 cpp 文件，clangd 就会开始构建索引，实测对于 leveldb 这种小项目，不到 1 分钟构建完毕。</p>
 <p>接下来就是愉快的 leveldb 学习之旅了，祝旅途愉快。</p>
     </div>
-    <div class="read-more">
-      <a href="/post/2022/wsl_vscode_clangd/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2021/hugo_github_pages_blog/">用 Hugo &#43; GithubPages 打造你的个人博客</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-12-18 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> Tools </a>
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">binchen</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-08-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/clangd/">Clangd</a>
+          <a href="/tags/vscode/">VSCode</a>
           </div>
-        <span class="more-meta"> 2271 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      介绍具体的搭建步骤之前，有一句话提醒自己，也提醒各位读者，最重要的事不是搭建网站，不是设计各种好看的主题，而是坚持写作，坚持记录和输出。 博客
-    </div>
-    <div class="read-more">
-      <a href="/post/2021/hugo_github_pages_blog/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2021/preface/">创刊词</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-12-14 </span>
-      <div class="post-category">
-          <a href="/categories/life/"> Life </a>
-          </div>
-        <span class="more-meta"> 510 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      入职半年有余，笔者曾经信誓旦旦要像很多互联网大神一样，把自己学过的东西、经历过的事，取其精华记录在案，一来作为自己学习总结的一种手段，二来作
-    </div>
-    <div class="read-more">
-      <a href="/post/2021/preface/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2021/vscode_remote_clangd/">Install clangd in alios 7</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2021-12-12 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> Tools </a>
-          </div>
-        <span class="more-meta"> 1629 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      clangd 是一款 C/C++ language server，可以很方便地进行代码跳转、提示、补全等，本文总结在 alios 7 上安装 clangd 的一些经验 根据 clangd 官网安装指南，有 3 种方式安装 clan
-    </div>
-    <div class="read-more">
-      <a href="/post/2021/vscode_remote_clangd/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    
-    
-  </nav>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2021/hugo_github_pages_blog/">
+            <span class="next-text nav-default">用 Hugo &#43; GithubPages 打造你的个人博客</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="BinChenn/binchenn.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
 
       </div>
     </main>

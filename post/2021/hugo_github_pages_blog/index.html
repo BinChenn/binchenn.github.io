@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.87.0 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="https://binchenn.github.io/post/2021/hugo_github_pages_blog/" />
@@ -194,8 +194,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">brew install hugo
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install hugo
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>验证是否安装成功：</p>
 <div class="highlight"><div class="chroma">
@@ -204,9 +204,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo version
-hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo version
+</span></span><span class="line"><span class="cl">hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="建立博客站点">建立博客站点</h3>
 <p>安装 Hugo 之后，需要建立一个文件目录存放网站所有内容，Hugo 提供了简单的命令行工具。运行下面的命令：</p>
@@ -215,8 +215,8 @@ hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class=
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new site myblogsite
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site myblogsite
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>会看到以下提示内容：</p>
 <div class="highlight"><div class="chroma">
@@ -231,15 +231,15 @@ hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class=
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Congratulations! Your new Hugo site is created in /Users/xxx/myblogsite.
-
-Just a few more steps and you’re ready to go:
-
-Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/, or create your own with the “hugo new theme ” command.
-Perhaps you want to add some content. You can add single files with “hugo new /.”.
-Start the built-in live server via “hugo server”.
-Visit https://gohugo.io/ for quickstart guide and full documentation.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Congratulations! Your new Hugo site is created in /Users/xxx/myblogsite.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Just a few more steps and you’re ready to go:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/, or create your own with the “hugo new theme ” command.
+</span></span><span class="line"><span class="cl">Perhaps you want to add some content. You can add single files with “hugo new /.”.
+</span></span><span class="line"><span class="cl">Start the built-in live server via “hugo server”.
+</span></span><span class="line"><span class="cl">Visit https://gohugo.io/ for quickstart guide and full documentation.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>博客目录下会有以下内容：</p>
 <div class="highlight"><div class="chroma">
@@ -247,8 +247,8 @@ Visit https://gohugo.io/ for quickstart guide and full documentation.
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">archetypes/  config.toml content/   data/    layouts/     public/      resources/   static/      themes/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">archetypes/  config.toml content/   data/    layouts/     public/      resources/   static/      themes/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中 <code>archetypes/</code> 中有一个 <code>default.md</code>，保存了新建博文的默认配置；<code>config.toml</code> 是博客的配置文件；<code>themes/</code>保存了主题文件。</p>
 <p>后续步骤中还会有 <code>public/</code> 目录，构建生成的网页文件将全部保存在<code>public/</code>目录。</p>
@@ -260,9 +260,9 @@ Visit https://gohugo.io/ for quickstart guide and full documentation.
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">git init -b main
-git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git init -b main
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>用 <code>themes/even/exampleSite/config.toml</code> 替换默认配置文件，也可以根据需求将 <code>themes/even/archetypes/default.md</code> 替换到 <code>archetypes/default.md</code>，编辑 <code>default.md</code>，设置 <code>draft: false</code>，这样每篇新建的博文都默认可以直接发布。</p>
 <h3 id="新建博文">新建博文</h3>
@@ -274,10 +274,10 @@ git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new post/test.md
-或者
-hugo new post/2021/test.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new post/test.md
+</span></span><span class="line"><span class="cl">或者
+</span></span><span class="line"><span class="cl">hugo new post/2021/test.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>就可以新建一篇博文，编辑 <code>test.md</code> 的内容，开始你的博客写作吧。</p>
 <h3 id="查看网站效果">查看网站效果</h3>
@@ -308,29 +308,29 @@ hugo new post/2021/test.md
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">➜   hugo server
-Start building sites … 
-hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
-
-                   <span class="p">|</span> EN  
--------------------+-----
-  Pages            <span class="p">|</span> <span class="m">30</span>  
-  Paginator pages  <span class="p">|</span>  <span class="m">0</span>  
-  Non-page files   <span class="p">|</span>  <span class="m">0</span>  
-  Static files     <span class="p">|</span> <span class="m">39</span>  
-  Processed images <span class="p">|</span>  <span class="m">0</span>  
-  Aliases          <span class="p">|</span> <span class="m">10</span>  
-  Sitemaps         <span class="p">|</span>  <span class="m">1</span>  
-  Cleaned          <span class="p">|</span>  <span class="m">0</span>  
-
-Built in <span class="m">41</span> ms
-Watching <span class="k">for</span> changes in xxx
-Watching <span class="k">for</span> config changes in xxx
-Environment: <span class="s2">&#34;development&#34;</span>
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ <span class="o">(</span><span class="nb">bind</span> address 127.0.0.1<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">➜   hugo server
+</span></span><span class="line"><span class="cl">Start building sites … 
+</span></span><span class="line"><span class="cl">hugo v0.87.0+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                   <span class="p">|</span> EN  
+</span></span><span class="line"><span class="cl">-------------------+-----
+</span></span><span class="line"><span class="cl">  Pages            <span class="p">|</span> <span class="m">30</span>  
+</span></span><span class="line"><span class="cl">  Paginator pages  <span class="p">|</span>  <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Non-page files   <span class="p">|</span>  <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Static files     <span class="p">|</span> <span class="m">39</span>  
+</span></span><span class="line"><span class="cl">  Processed images <span class="p">|</span>  <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Aliases          <span class="p">|</span> <span class="m">10</span>  
+</span></span><span class="line"><span class="cl">  Sitemaps         <span class="p">|</span>  <span class="m">1</span>  
+</span></span><span class="line"><span class="cl">  Cleaned          <span class="p">|</span>  <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Built in <span class="m">41</span> ms
+</span></span><span class="line"><span class="cl">Watching <span class="k">for</span> changes in xxx
+</span></span><span class="line"><span class="cl">Watching <span class="k">for</span> config changes in xxx
+</span></span><span class="line"><span class="cl">Environment: <span class="s2">&#34;development&#34;</span>
+</span></span><span class="line"><span class="cl">Serving pages from memory
+</span></span><span class="line"><span class="cl">Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+</span></span><span class="line"><span class="cl">Web Server is available at http://localhost:1313/ <span class="o">(</span><span class="nb">bind</span> address 127.0.0.1<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在浏览器中访问 <code>http://localhost:1313/</code>即可预览网站效果。</p>
 <h3 id="博客网站部署">博客网站部署</h3>
@@ -348,15 +348,15 @@ Web Server is available at http://localhost:1313/ <span class="o">(</span><span 
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkdir public <span class="o">&amp;&amp;</span> <span class="nb">cd</span> public
-git init -b main
-git remote add upstream git@github.com:<span class="nv">$USER_NAME</span>/xxx.github.io.git
-<span class="nb">cd</span> ..
-hugo -t even <span class="c1"># 生成网页内容并保存到 public/ 目录</span>
-git add .
-git commit -m <span class="s2">&#34;blog init&#34;</span>
-git push -f upstream main
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir public <span class="o">&amp;&amp;</span> <span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git init -b main
+</span></span><span class="line"><span class="cl">git remote add upstream git@github.com:<span class="nv">$USER_NAME</span>/xxx.github.io.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">hugo -t even <span class="c1"># 生成网页内容并保存到 public/ 目录</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;blog init&#34;</span>
+</span></span><span class="line"><span class="cl">git push -f upstream main
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就部署成功了，等待几分钟后，访问网址：<code>xxx.github.io</code>即可看到自己的博客内容。</p>
 <h2 id="博客配置和优化">博客配置和优化</h2>
@@ -377,10 +377,10 @@ git push -f upstream main
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">utterances</span><span class="p">]</span>       <span class="c"># https://utteranc.es/</span>
-    <span class="nx">owner</span> <span class="p">=</span> <span class="s2">&#34;USER_NAME&#34;</span>              <span class="c"># Your GitHub ID</span>
-    <span class="nx">repo</span> <span class="p">=</span> <span class="s2">&#34;xxx.github.io&#34;</span>               <span class="c"># The repo to store comment</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">utterances</span><span class="p">]</span>       <span class="c"># https://utteranc.es/</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">owner</span> <span class="p">=</span> <span class="s2">&#34;USER_NAME&#34;</span>              <span class="c"># Your GitHub ID</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">repo</span> <span class="p">=</span> <span class="s2">&#34;xxx.github.io&#34;</span>               <span class="c"># The repo to store comment</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -397,8 +397,8 @@ git push -f upstream main
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new about.md
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new about.md
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以上命令将会创建 <code>contents/about.md</code> 文件</p>
 </li>
@@ -415,14 +415,14 @@ git push -f upstream main
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
-title: &#34;About&#34;
-date: 2021-12-19T13:51:21+08:00
-draft: false
-menu: &#34;main&#34;     # 在 main 新增选项 
-weight: 50       # About 选项的位置
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;About&#34;
+</span></span><span class="line"><span class="cl">date: 2021-12-19T13:51:21+08:00
+</span></span><span class="line"><span class="cl">draft: false
+</span></span><span class="line"><span class="cl">menu: &#34;main&#34;     # 在 main 新增选项 
+</span></span><span class="line"><span class="cl">weight: 50       # About 选项的位置
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
@@ -438,9 +438,9 @@ weight: 50       # About 选项的位置
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">keywords: []
-description: &#34;&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">keywords: []
+</span></span><span class="line"><span class="cl">description: &#34;&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -456,8 +456,8 @@ description: &#34;&#34;
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>      <span class="c"># UA-XXXXXXXX-X</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>      <span class="c"># UA-XXXXXXXX-X</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -490,7 +490,11 @@ description: &#34;&#34;
           <a href="/tags/blog/">Blog</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/2022/wsl_vscode_clangd/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">搭建 WSL &#43; VSCode &#43; Clangd 开发环境</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/2021/preface/">
             <span class="next-text nav-default">创刊词</span>
             <span class="next-text nav-mobile">Next</span>
@@ -538,7 +542,8 @@ description: &#34;&#34;
 
   <span class="copyright-year">
     &copy; 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>binchen</span>
+    2021 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>binchen</span>
   </span>
 </div>
 
@@ -555,7 +560,7 @@ description: &#34;&#34;
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

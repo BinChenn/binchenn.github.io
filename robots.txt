@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://binchenn.github.io/sitemap.xml
